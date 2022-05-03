@@ -1,5 +1,5 @@
 module "vpc" {
-  source                = "../modules/new-aws-vpc"
+  source                = "../modules/aws-vpc"
 
   env_id                = local.env_id
   purpose_id            = local.purpose_id
