@@ -1,6 +1,9 @@
 locals {
-  env_id     = replace(terraform.workspace, "default", "dev")
-  purpose_id = "passbird"
+  env_id                 = replace(terraform.workspace, "default", "dev")
+  default_lambda_timeout = 300
+  lambda_nodejs_runtime  = "nodejs12.x"
+  lambda_api             = "run_from_lambda"
+  purpose_id             = "passbird"
   # AWS Region
   aws_region_map = {
     "dev"  = "ap-south-1"
